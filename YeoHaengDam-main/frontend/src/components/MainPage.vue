@@ -44,7 +44,7 @@ const handleContentSelected = (content) => {
 
 const handleSidoSelection = async (sido) => {
   const response = await axios.get(
-    `https://api.ttalkak.com/api/spot/listGugun?sidoCode=${sido.id}&sidoName=${sido.name}`
+    `https://api_yeohaengdam.ttalkak.com/api/spot/listGugun?sidoCode=${sido.id}&sidoName=${sido.name}`
   );
   guguns.value = response.data.map((item) => ({
     id: item.gugunCode,

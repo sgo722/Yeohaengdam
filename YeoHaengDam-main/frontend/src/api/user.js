@@ -8,7 +8,7 @@ async function joinUser(user) {
   try {
     console.log(user);
     const response = await axios.post(
-      'https://api.ttalkak.com/api/users/join',
+      'https://api_yeohaengdam.ttalkak.com/api/users/join',
       user
     );
     if (response.status === 200) {

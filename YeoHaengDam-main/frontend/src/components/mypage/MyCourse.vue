@@ -12,7 +12,7 @@ const courses = ref([]);
 onMounted(async () => {
   try {
     const token = sessionStorage.getItem('accessToken');
-    const response = await axios.get('https://api.ttalkak.com/api/course', {
+    const response = await axios.get('https://api_yeohaengdam.ttalkak.com/api/course', {
       headers: {
         Authorization: `Bearer ${token}`,
       },

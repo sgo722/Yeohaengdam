@@ -22,7 +22,7 @@ const totalPages = computed(() =>
 // 데이터 가져오기 함수
 async function fetchArticles(page) {
   try {
-    const response = await axios.get('https://api.ttalkak.com/api/articles', {
+    const response = await axios.get('https://api_yeohaengdam.ttalkak.com/api/articles', {
       headers: {
         Authorization: `Bearer ${token}`, // Authorization 헤더에 토큰을 추가합니다.
       },
@@ -53,11 +53,11 @@ async function showModal(board) {
   try {
     // 상세 보기
     const articleResponse = await axios.get(
-      `https://api.ttalkak.com/api/articles/${board.articleId}`
+      `https://api_yeohaengdam.ttalkak.com/api/articles/${board.articleId}`
     );
     // 댓글 가져오기
     const commentsResponse = await axios.get(
-      `https://api.ttalkak.com/api/comment/${board.articleId}`
+      `https://api_yeohaengdam.ttalkak.com/api/comment/${board.articleId}`
     );
     selectedItem.value = articleResponse.data;
     comments.value = commentsResponse.data;
