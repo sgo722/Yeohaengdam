@@ -25,7 +25,7 @@ onMounted(async () => {
   if (sidoCode && gugunCode && contentCode) {
     try {
       const response = await axios.get(
-        "https://api_yeohaengdam.ttalkak.com/api/spot/listSpot",
+        "https://apiyeohaengdam.ttalkak.com/api/spot/listSpot",
         {
           params: {
             sidoCode: parseInt(sidoCode),
@@ -101,7 +101,7 @@ const savePlan = async (saveData) => {
   console.log("emit 이벤트 수신 : ", saveData);
   try {
     const token = sessionStorage.getItem("accessToken");
-    await axios.post("https://api_yeohaengdam.ttalkak.com/api/course/save", saveData, {
+    await axios.post("https://apiyeohaengdam.ttalkak.com/api/course/save", saveData, {
       headers: {
         Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",

@@ -98,7 +98,6 @@ const scrollToSection = () => {
             </h2>
             <div class="h-full mt-auto overflow-hidden relative">
               <img
-                src="../../public/landing/n1.PNG"
                 class="h-full w-full object-contain"
                 alt=""
               />
@@ -152,7 +151,6 @@ const scrollToSection = () => {
             </h2>
             <div class="h-full mt-auto overflow-hidden relative">
               <img
-                src="../../public/landing/n2.PNG"
                 class="h-full w-full object-contain"
                 alt=""
               />
@@ -171,7 +169,6 @@ const scrollToSection = () => {
             </h2>
             <div class="h-full mt-auto overflow-hidden relative">
               <img
-                src="../../public/landing/n3.PNG"
                 class="h-full w-full object-contain"
                 alt=""
               />

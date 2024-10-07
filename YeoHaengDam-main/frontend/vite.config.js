@@ -14,7 +14,6 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  assetsInclude: ['**/*.png'] // PNG 파일을 자산으로 포함
 })
-
-
