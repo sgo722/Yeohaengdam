@@ -1,5 +1,5 @@
 # 1. 빌드 스테이지
-FROM node:14.17.0 AS build
+FROM node:18.17.0 AS build
 WORKDIR /app
 
 # package.json과 package-lock.json을 복사하고 의존성 설치
