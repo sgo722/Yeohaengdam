@@ -41,7 +41,6 @@ public class UserController {
      * 닉네임 중복 검증
      */
     @GetMapping("/check_nickname/{nickname}")
-
     public ResponseEntity<?> checkNickname(@PathVariable(value = "nickname") String nickname){
         boolean isAvailable = userService.checkNickname(nickname);
         System.out.println("중복 조회" + nickname);
