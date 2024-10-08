@@ -10,6 +10,8 @@ RUN npm install
 COPY . .
 RUN npm run build
 
+# 디버깅용: 빌드 후 app 디렉토리 내용 확인
+RUN ls -l /app
 # 2. 프로덕션 스테이지
 FROM nginx:stable-alpine
 
@@ -21,3 +23,5 @@ RUN chmod -R 755 /usr/share/nginx/html
 
 # Nginx 실행
 CMD ["nginx", "-g", "daemon off;"]
+
+RUN chmod -R 775 /usr/share/nginx/html
