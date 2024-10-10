@@ -57,7 +57,7 @@ const savePlanData = async () => {
   console.log(updateData);
   try {
     const response = await axios.patch(
-      "https://apiyeohaengdam.ttalkak.com/api/course/update",
+      "http://localhost:8080/api/course/update",
       updateData,
       {
         headers: {
@@ -84,7 +84,7 @@ const fetchCourseDetails = async () => {
   const courseId = route.params.courseId;
   try {
     const response = await axios.get(
-      `https://apiyeohaengdam.ttalkak.com/api/course/${courseId}`
+      `http://localhost:8080/api/course/${courseId}`
     );
     // planData.value = addCustomAttributes(
     //   response.data.schedules.map((schedule) => schedule.spot)

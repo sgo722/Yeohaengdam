@@ -45,7 +45,7 @@ const nicknameCheck = async () => {
 
   try {
     const response = await axios.get(
-      `https://apiyeohaengdam.ttalkak.com/api/users/check_nickname/${nickname.value}`
+      `http://localhost:8080/api/users/check_nickname/${nickname.value}`
     );
     if (response.data.available) {
       const confirmUse = confirm(
@@ -84,7 +84,7 @@ const handleFileChange = async (event) => {
     formData.append("image", file);
     try {
       const response = await axios.post(
-        "https://apiyeohaengdam.ttalkak.com/api/users/updateProfile",
+        "http://localhost:8080/api/users/updateProfile",
         formData,
         {
           headers: {
@@ -121,7 +121,7 @@ const handleUpdate = async () => {
 
   try {
     const response = await axios.put(
-      "https://apiyeohaengdam.ttalkak.com/api/users/update_nickname",
+      "http://localhost:8080/api/users/update_nickname",
       user,
       {
         headers: {

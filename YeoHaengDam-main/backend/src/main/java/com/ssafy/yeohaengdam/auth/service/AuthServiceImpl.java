@@ -22,7 +22,7 @@ public class AuthServiceImpl implements AuthService{
         User user = userMapper.findByEmail(loginRequest.getEmail());
         System.out.println(user);
 
-        if(!passwordEncoder.matches(loginRequest.getPassword(),user.getPassword())){
+        if(!loginRequest.getPassword().equals(user.getPassword())){
             throw new IllegalArgumentException("비밀번호를 확인하세요.");
         }
 

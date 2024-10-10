@@ -1,12 +1,10 @@
 import axios from "axios";
 // import { httpStatusCode } from "./http-status";
 
-const { VITE_VUE_API_URL } = import.meta.env;
-const { VITE_ELECTRIC_CHARGING_STATION_URL } = import.meta.env;
 // station vue api axios instance
 function stationAxios() {
   const instance = axios.create({
-    baseURL: VITE_ELECTRIC_CHARGING_STATION_URL,
+    baseURL: "http://localhost:8080",
     headers: {
       "Content-Type": "application/json;charset=utf-8",
     },
@@ -17,7 +15,7 @@ function stationAxios() {
 // local vue api axios instance
 function localAxios() {
   const instance = axios.create({
-    baseURL: VITE_VUE_API_URL,
+    baseURL: "http://localhost:8080",
     // withCredentials: true,
     // headers: {
     //   "Content-Type": "application/json;charset=utf-8",
